@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="Tech Care - Better Healthcare Tracking Quickly">
+    <meta name="description" content="Tech Care is a cutting-edge health startup providing innovative solutions for patient care, diagnosis, and medical management. Join us in transforming healthcare.">
+    <meta name="keywords" content="health startup, medical diagnosis, healthcare solutions, Tech Care">
+    <meta name="author" content="Tech Care">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Tech Care</title>
+  </head>
+  <body>
+    <nav class="navigation">
+      <div class="nav-inner-container">
+        <div class="logo">
+          <img src="/images/TestLogo.svg" alt="logo" />
+        </div>
+        <ul class="mid-nav-items">
+          <li>
+            <img src="/images/home_FILL0_wght300_GRAD0_opsz24.svg" alt="home" />
+            <p>Overview</p>
+          </li>
+          <li class="active">
+            <img src="/images//group_FILL0_wght300_GRAD0_opsz24.svg" alt="patients" />
+            <p>Patients</p>
+          </li>
+          <li>
+            <img
+              src="/images/calendar_today_FILL0_wght300_GRAD0_opsz24.svg"
+              alt="schedule"
+            />
+            <p>Schedule</p>
+          </li>
+          <li>
+            <img
+              src="/images/chat_bubble_FILL0_wght300_GRAD0_opsz24.svg"
+              alt="message"
+            />
+            <p>Message</p>
+          </li>
+          <li>
+            <img
+              src="/images/credit_card_FILL0_wght300_GRAD0_opsz24.svg"
+              alt="transactions"
+            />
+            <p>Transactions</p>
+          </li>
+        </ul>
+
+        <div class="right-nav-items">
+          <div class="profile">
+            <img
+              src="/images/senior-woman-doctor-and-portrait-smile-for-health-2023-11-27-05-18-16-utc@2x.png"
+              alt="female doctor"
+            />
+            <div class="profile-name-and-title">
+              <p>Dr. Jose Simons</p>
+              <p>General Practitioner</p>
+            </div>
+          </div>
+          <img
+            src="/images/settings_FILL0_wght300_GRAD0_opsz24.svg"
+            alt="settings"
+            class="setting-icon"
+          />
+          <img
+            src="/images/more_vert_FILL0_wght300_GRAD0_opsz24.svg"
+            alt="more"
+            class="more-icon"
+          />
+        </div>
+      </div>
+    </nav>
+
+    <main class="rest-of-body">
+      <section class="flex-1">
+        <article class="flex-1-inner">
+          <div class="flex-1-heading">
+            <header><h2>Patients</h2></header>
+            <img src="/images/search_FILL0_wght300_GRAD0_opsz24.svg" alt="search" />
+          </div>
+          <div class="patients-list custom-scroll" id="patients-list">
+          </div>
+        </article>
+      </section>
+
+   
+
+      <section class="flex-2">       
+        <article class="diagnosis-history">
+          <header>
+            <h2>Diagnosis History</h2>
+          </header>
+          <div class="chart-wrapper">
+            <div class="chart-view">
+              <div class="chart-top">
+                <header><h2>Blood Pressure</h2></header>
+                <div class="chart-date-dropdown">
+                  <span>Last 6 month</span>
+                  <img src="/images/expand_more_FILL0_wght300_GRAD0_opsz24.svg" alt="expand" />
+                </div>
+              </div>
+              <canvas id="my-chart"></canvas>
+            </div>
+            <div class="blood-pressure">
+              <div class="systolic chart-details">
+                <div class="label">
+                  <div></div>
+                  <h4>Systolic</span>
+                </div>
+                <span id="systolicAverage" class="average">0</span>
+                <div class="average-label">
+                  <img src="/images/ArrowUp.svg" alt="Arrow up">
+                  <span>
+                    Higher than Average
+                  </span>
+                </div>
+              </div>
+              <div class="distolic chart-details">
+                <div class="label">
+                  <div></div>
+                  <h4>Diastolic</span>
+                </div>
+                <span  id="distolicAverage"class="average">0</span>
+                <div class="average-label">
+                  <img src="/images/ArrowDown.svg" alt="Arrow down">
+                  <span>
+                    Lower than Average
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div> 
+          <div class="vital-sign-container">
+            <div class="vital-sign" id="respiratory">
+              <img src="/images/respiratory rate.svg" alt="respiratory" />
+              <p>Respiratory Rate</p>
+              <p>20 bpm</p>
+              <p>Normal</p>
+            </div>
+            <div class="vital-sign" id="temperature">
+              <img src="/images/temperature.svg" alt="vital sign" />
+              <p>Temperature</p>
+              <p>98.6 °F</p>
+              <p>Normal</p>
+            </div>
+            <div class="vital-sign" id="heart">
+              <img src="/images/HeartBPM.svg" alt="heart" />
+              <p>Heart Rate</p>
+              <p>78 bpm</p>
+              <p>Lower than Avarage</p>
+            </div>
+          </div>
+        </article>
+        <div class="diagnostic-list">
+          <header><h2>Diagnostic List</h2></header>
+
+          <table>
+            <thead>
+              <tr class="table-header">
+                <th>Problem/Diagnosis</th>
+                <th>Description</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="diagnostic-list-table" class="custom-scroll"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <aside class="flex-3">
+        <article class="profile-container" id="profile-container">
+          <!-- dynamically inserting profile info here -->
+        </article>
+        <article class="lab-results">
+          <header><h2>Lab Results</h2></header>
+          <div class="lab-results-list custom-scroll" id="lab-results-list"></div>
+          </div>
+        </article>
+      </aside>
+    </main>
+
+    <script type="module" src="/api.js"></script>
+  </body>
+</html>

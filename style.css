@@ -1,0 +1,503 @@
+:root {
+  --background-color-light: #f6f7f8;
+  --background-color-white: #fff;
+  --primary-color: #072635;
+  --secondary-color: #707070;
+  --highlight-color: #01f0d0;
+  --font-family: "Manrope", sans-serif;
+  --border-radius-large: 70px;
+  --border-radius-medium: 41px;
+  --border-radius-small: 16px;
+  --border-color-light: rgb(203, 202, 202);
+  --font-size-base: 14px;
+  --font-size-large: 24px;
+  --font-size-medium: 16px;
+  --font-size-small: 13px;
+  --padding-small: 1rem;
+  --padding-medium: 1.5%;
+  --padding-large: 2rem;
+  --padding-extra-large: 11px 16px;
+  --gap-small: 0.3rem;
+  --gap-medium: 1.5rem;
+  --gap-large: 30px;
+  --opacity: 1;
+  --box-shadow: 0px 0px no-repeat padding-box;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--background-color-light) var(--box-shadow);
+  min-width: 100vw;
+  min-height: 100vh;
+  padding: var(--padding-medium);
+  font-family: var(--font-family);
+  font-optical-sizing: auto;
+  font-size: var(--font-size-base);
+  color: var(--primary-color);
+}
+
+.navigation {
+  width: 100%;
+  height: 72px;
+  background: var(--background-color-white) var(--box-shadow);
+  border-radius: var(--border-radius-large);
+  opacity: var(--opacity);
+}
+
+.nav-inner-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  flex: 1;
+  margin-left: var(--padding-large);
+}
+
+.logo img {
+  width: 211px;
+}
+
+.mid-nav-items {
+  list-style: none;
+  display: flex;
+  gap: var(--gap-medium);
+  flex: 2;
+}
+
+.mid-nav-items li {
+  display: flex;
+  align-items: center;
+}
+
+.mid-nav-items li.active {
+  background-color: var(--highlight-color);
+  padding: var(--padding-extra-large);
+  border-radius: var(--border-radius-medium);
+}
+
+.mid-nav-items li img {
+  margin-right: var(--gap-small);
+}
+
+.right-nav-items {
+  right: 0;
+  display: flex;
+  flex: 1;
+}
+
+.profile {
+  display: flex;
+  padding-right: var(--padding-small);
+  border-right: 1px solid var(--border-color-light);
+}
+
+.profile img {
+  width: 44px;
+}
+
+.profile-name-and-title {
+  font-size: var(--font-size-base);
+  margin-left: var(--gap-small);
+}
+
+.profile-name-and-title :nth-child(1) {
+  font-weight: bold;
+}
+
+.profile-name-and-title :nth-child(2) {
+  font-weight: 300;
+  color: var(--secondary-color);
+}
+
+.setting-icon {
+  margin-left: var(--gap-small);
+  margin-right: var(--gap-small);
+}
+
+.rest-of-body {
+  display: flex;
+  gap: var(--gap-large);
+  margin-top: var(--padding-large);
+}
+
+.rest-of-body .flex-1 {
+  background-color: var(--background-color-white);
+  flex: 1;
+  height: 1054px; /* Remove this if unnecessary */
+  border-radius: var(--border-radius-small);
+}
+
+.flex-1-inner {
+  width: 302px;
+}
+
+.rest-of-body .flex-2 {
+  flex: 3;
+}
+
+.rest-of-body .flex-3 {
+  flex: 1;
+}
+
+.flex-1-heading {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--padding-small);
+}
+
+.flex-1-heading h2 {
+  font-size: var(--font-size-large);
+}
+
+.diagnosis-history {
+  background-color: var(--background-color-white);
+  min-height: 660px;
+  border-radius: var(--border-radius-small);
+  min-width: 650px;
+  padding: var(--padding-small);
+}
+
+.diagnostic-list {
+  background-color: var(--background-color-white);
+  margin-top: var(--padding-large);
+  border-radius: var(--border-radius-small);
+  padding: var(--padding-small);
+}
+
+.diagnosis-history h2 {
+  margin-bottom: var(--padding-small);
+}
+
+.vital-sign-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--padding-large);
+}
+
+.vital-sign-container .vital-sign {
+  width: 198px;
+  height: 230px;
+  padding: 0.5rem var(--padding-small);
+  border-radius: 12px;
+}
+
+.vital-sign-container .vital-sign p:nth-child(2) {
+  font-size: var(--font-size-medium);
+  margin-top: 0.5rem;
+}
+
+.vital-sign-container .vital-sign p:nth-child(3) {
+  font-size: 30px;
+  font-weight: 800;
+  margin-top: -0.5rem;
+}
+
+.vital-sign-container .vital-sign p:nth-child(4) {
+  margin-top: 1.5rem;
+}
+
+#respiratory {
+  background: #e0f3fa var(--box-shadow);
+}
+
+#temperature {
+  background: #ffe6e9 var(--box-shadow);
+}
+
+#heart {
+  background: #ffe6f1 var(--box-shadow);
+}
+
+.chart-wrapper {
+  display: flex;
+  padding: 16px;
+  background: #f4f0fe var(--box-shadow);
+  border-radius: var(--border-radius-small);
+}
+
+.chart-wrapper .chart-view {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-view .chart-top {
+  margin-bottom: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chart-top h2 {
+  margin-bottom: 0;
+}
+
+.chart-top .chart-date-dropdown {
+  display: flex;
+  gap: var(--gap-small);
+}
+
+.blood-pressure {
+  margin-left: 28px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.blood-pressure .chart-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.chart-details.systolic {
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #cbc8d4;
+}
+
+.chart-details.systolic .label div {
+  background-color: #e66fd2;
+}
+
+.chart-details.distolic .label div {
+  background-color: #8c6fe6;
+}
+
+.chart-details .label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.chart-details .label div {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+
+.chart-details .label h4 {
+  margin-bottom: 0;
+  font-size: var(--font-size-base);
+  font-weight: bold;
+}
+
+.chart-details .average {
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.chart-details .average-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.average-label span {
+  font-weight: normal;
+  font-size: var(--font-size-base);
+}
+
+table {
+  width: 100%;
+  text-align: left;
+  font-size: var(--font-size-base);
+  margin-top: var(--padding-large);
+  border-collapse: collapse;
+}
+
+tr {
+  height: 3rem;
+  border: none;
+  padding: var(--padding-small);
+}
+
+.table-header {
+  background: var(--background-color-light) var(--box-shadow);
+}
+
+thead,
+tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+tbody {
+  display: block;
+  height: 150px; /* Adjust this height as needed */
+  overflow-y: scroll;
+  width: 100%;
+}
+
+table th:first-child {
+  border-radius: 24px 0 0 24px;
+}
+
+table th:last-child {
+  border-radius: 0 24px 24px 0;
+}
+
+table th,
+table td {
+  padding-left: var(--padding-small);
+}
+
+.flex-3 .profile-container {
+  padding: var(--padding-small);
+  min-width: 302px;
+  background-color: var(--background-color-white);
+  border-radius: var(--border-radius-small);
+  padding-bottom: 3rem;
+}
+
+.profile-container-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-container .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.profile-head-img {
+  width: 200px;
+}
+
+.profile-container .header p {
+  font-size: var(--font-size-large);
+  font-weight: 800;
+  margin-top: 1rem;
+}
+
+.info-card {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.info-card img {
+  margin-right: var(--gap-small);
+  width: 42px;
+}
+
+.info-details p:nth-child(1) {
+  letter-spacing: 0px;
+}
+
+.info-details p:nth-child(2) {
+  font-weight: bold;
+}
+
+.profile-container button {
+  width: 220px;
+  height: 41px;
+  border-radius: 41px;
+  background: var(--highlight-color) var(--box-shadow);
+  border: none;
+  margin: 0 auto;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.lab-results {
+  padding: var(--padding-small);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-color-white);
+  border-radius: var(--border-radius-small);
+  margin-top: var(--padding-large);
+}
+
+.lab-results h2 {
+  font-size: var(--font-size-large);
+  margin-bottom: var(--padding-small);
+}
+
+.lab-results-list {
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.lab-result-card {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-size-small);
+  margin-bottom: var(--padding-small);
+  padding: 0.5rem var(--padding-small);
+  cursor: pointer;
+}
+
+.lab-result-card:hover {
+  background: var(--background-color-light) var(--box-shadow);
+}
+
+.lab-result-card img {
+  width: 15px;
+}
+
+.patients-list {
+  overflow-y: scroll;
+  height: 980px;
+}
+
+.patient-card {
+  display: flex;
+  align-items: center;
+  padding: var(--padding-small);
+  cursor: pointer;
+}
+
+.patient-card:hover,
+.patient-card.selected {
+  background: #d8fcf7 var(--box-shadow);
+}
+
+.patient-card-img {
+  width: 48px;
+}
+
+.patient-info {
+  margin-left: var(--gap-small);
+  font-size: var(--font-size-base);
+}
+
+.patient-info p:nth-child(1) {
+  font-weight: bold;
+}
+
+.patient-info p:nth-child(2) {
+  color: var(--secondary-color);
+}
+
+.patient-card-right-flex {
+  margin-left: auto;
+}
+
+.custom-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  border-radius: 3px;
+  background: #e3e4e6;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background: var(--primary-color);
+}
+
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
